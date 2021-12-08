@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./reset.css">
+  <title>Mensagens Escondidas</title>
+</head>
+
+<body>
+  <header class="titulo">
+    <h1> Mensagens Escondidas </h1>
+  </header>
+
+
+  <div class="form">
+    <h2> Codifique e Decodifique mensagens utilizando "Cifra de César ou "Base64" </h2></br>
+    <form>
+      <label for="entradaTexto"> Mensagem: </label></br>
+      <input type="text" id="entradaTexto" placeholder="Digite sua Mensagem"></br></br>
+
+      <label for="opCod">Selecione a codificação escolhida</label>
+      <select id="opCod">
+        <option value="null" disabled selected>Selecione Opção</option>
+        <option value="cifra">Cifra de César</option>
+        <option value="base">Base64</option>
+      </select>
+
+      </br>
+      </br>
+      </br>
+
+      <div class="chave" style="display:none;" id="option;">
+        <label for="incremento"> Escolha sua chave ( de 1 a 25)</label>
+        <input type="number" id="incremento" min="1" max="25" default="0">
+      </div>
+
+      <div class="escolhaCod">
+        <label for="codificar"> Codificar </label>
+        <input type="radio" name="escolhaDecod" id="codificar" value="codifica" checked="checked">
+
+        <label for="decodificar"> Decodificar </label>
+        <input type="radio" name="escolhaDecod" id="decodificar" value="decodifica">
+      </div></br>
+
+
+      <button id="botao" type="submit">Enviar Mensagem</button>
+      </br>
+      <br>
+      <div class=retornoTexto>
+        <textarea id="mensagemFinal" readonly></textarea>
+      </div>
+
+    </form>
+  </div>
+  <script src="./conversao.js"></script>
+</body>
+
+</html>
